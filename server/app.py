@@ -1,11 +1,12 @@
 from flask import Flask, request, make_response,jsonify, abort
 from flask_restful import Resource, Api
 from flask_migrate import Migrate
-
+from flask_cors import CORS 
 from models import db, Restaurant, Pizza, RestaurantPizza
 
 app = Flask(__name__)
 api = Api(app)
+CORS(app) 
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///pizza.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
@@ -19,7 +20,7 @@ db.init_app(app)
 class Home(Resource):
     def get(self):
         response_dict = {
-            "home": "Welcome to Pizza/Restaurants API"
+            "home": "Welcome to the Pizza/Restaurants API"
         }
         response = make_response(
             jsonify(response_dict),
@@ -51,7 +52,6 @@ api.add_resource(Restaurants, '/restaurants')
 # GET/DELETE/restaurants/:id Route
 
 from flask import jsonify, make_response, abort
-from flask_restful import Resource
 from models import db, Restaurant, RestaurantPizza
 
 class RestaurantsId(Resource):
@@ -164,4 +164,4 @@ class RestaurantPizzas(Resource):
             return jsonify({"errors": ["validation errors"]}), 400               
 
 if __name__ == '__main__':
-    app.run(port=5555)                   
+    app.run(port=5555, debug=True)                   

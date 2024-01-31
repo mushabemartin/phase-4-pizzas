@@ -12,19 +12,20 @@ with app.app_context():
 
     print("🍕 Seeding delicious pizzas...")
     pizzas = [
-        {"name": "Mediterranean Delight", "ingredients": "Pizza dough, hummus, cherry tomatoes, black olives, red onion, feta cheese, spinach leaves"},
-        {"name": "Spicy Veggie Fusion", "ingredients": "Pizza dough, spicy tomato sauce, bell peppers, jalapeños, red onion, mushrooms, mozzarella cheese"},
-        {"name": "Sausage and Artichoke Supreme", "ingredients": "Pizza dough, tomato sauce, Italian sausage, artichoke hearts, red bell peppers, mozzarella cheese"},
-        {"name": "Garlic Chicken Alfredo", "ingredients": "Pizza dough, alfredo sauce, garlic chicken, spinach, sun-dried tomatoes, parmesan cheese"},
-        {"name": "Pesto Shrimp Delight", "ingredients": "Pizza dough, pesto sauce, shrimp, cherry tomatoes, feta cheese, arugula"},
-        {"name": "Bacon Ranch BBQ", "ingredients": "Pizza dough, BBQ sauce, bacon, ranch dressing, red onion, cheddar cheese"},
-        {"name": "Truffle Mushroom Feast", "ingredients": "Pizza dough, truffle oil, mixed mushrooms, fontina cheese, arugula"},
-        {"name": "Spinach and Artichoke Alfredo", "ingredients": "Pizza dough, alfredo sauce, spinach, artichoke hearts, mozzarella cheese"},
-        {"name": "Buffalo Cauliflower Crunch", "ingredients": "Pizza dough, buffalo cauliflower, blue cheese crumbles, celery, ranch drizzle"},
-        {"name": "Mexican Street Corn Pizza", "ingredients": "Pizza dough, elote-style corn, cotija cheese, chili powder, lime, cilantro"},
-        {"name": "Tandoori Chicken Delight", "ingredients": "Pizza dough, tandoori chicken, curry sauce, bell peppers, red onion, cilantro, yogurt drizzle"},
-        {"name": "Seafood Extravaganza", "ingredients": "Pizza dough, marinara sauce, shrimp, scallops, mussels, calamari, garlic, parsley"}
-    ]
+    {"name": "Veggie Supreme", "ingredients": "Pizza dough, tomato sauce, bell peppers, mushrooms, black olives, red onion, mozzarella cheese"},
+    {"name": "Spicy Chicken Fiesta", "ingredients": "Pizza dough, spicy tomato sauce, grilled chicken, jalapeños, red peppers, red onion, cheddar cheese"},
+    {"name": "Pepperoni Paradise", "ingredients": "Pizza dough, tomato sauce, pepperoni, green peppers, red onion, black olives, mozzarella cheese"},
+    {"name": "BBQ Bacon Bliss", "ingredients": "Pizza dough, BBQ sauce, bacon, caramelized onions, mushrooms, mozzarella cheese"},
+    {"name": "Margarita Marvel", "ingredients": "Pizza dough, tomato sauce, fresh mozzarella, cherry tomatoes, basil, balsamic glaze"},
+    {"name": "Pesto Chicken Delight", "ingredients": "Pizza dough, pesto sauce, grilled chicken, sun-dried tomatoes, artichoke hearts, feta cheese"},
+    {"name": "Hawaiian Luau", "ingredients": "Pizza dough, tomato sauce, ham, pineapple, red onion, mozzarella cheese"},
+    {"name": "Mushroom Truffle Delight", "ingredients": "Pizza dough, truffle oil, assorted mushrooms, caramelized onions, fontina cheese, arugula"},
+    {"name": "Buffalo Chicken Ranch", "ingredients": "Pizza dough, buffalo sauce, grilled chicken, ranch dressing, red onion, celery, blue cheese crumbles"},
+    {"name": "Mediterranean Veggie Bliss", "ingredients": "Pizza dough, hummus, cherry tomatoes, kalamata olives, red peppers, red onion, feta cheese, spinach"},
+    {"name": "Spinach and Feta Fantasy", "ingredients": "Pizza dough, tomato sauce, spinach, feta cheese, black olives, red onion, garlic"},
+    {"name": "Taco Tuesday Pizza", "ingredients": "Pizza dough, seasoned beef, salsa, cheddar cheese, lettuce, tomatoes, sour cream"},
+]
+
 
     for pizza_data in pizzas:
         pizza = Pizza(**pizza_data)

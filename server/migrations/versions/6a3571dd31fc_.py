@@ -1,8 +1,8 @@
-"""create tables restaurants, pizzas, restaurant_pizzas
+"""empty message
 
-Revision ID: fd0b24b41971
+Revision ID: 6a3571dd31fc
 Revises: 
-Create Date: 2024-01-21 10:54:54.651251
+Create Date: 2024-01-31 13:11:02.310346
 
 """
 from alembic import op
@@ -10,7 +10,7 @@ import sqlalchemy as sa
 
 
 # revision identifiers, used by Alembic.
-revision = 'fd0b24b41971'
+revision = '6a3571dd31fc'
 down_revision = None
 branch_labels = None
 depends_on = None
